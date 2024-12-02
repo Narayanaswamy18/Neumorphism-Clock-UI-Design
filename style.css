@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('Analog.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.clock{
+    display: flex;
+    width: 350px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #121213;
+    box-shadow: -6px 6px 10px rgba(0, 0 , 0, 0.5),
+                6px -6px 10px rgba(255, 255 , 255, 0.5);
+    border-radius: 50%;
+}
+
+.clock:before{
+    content: "";
+    position: absolute;
+    background-image: url(clock.png);
+    background-size: cover;
+    width: 92%;
+    height: 92%;
+    background-color: rgb(24, 20, 20);
+    border-radius: 50%;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec{
+    position: absolute;
+}
+
+.clock .hour,
+.hr{
+    width: 160px;
+    height: 160px;
+}
+
+.clock .min,
+.mn{
+    width: 190px;
+    height: 190px;
+}
+
+.clock .sec,
+.sc{
+    width: 230px;
+    height: 230px;
+}
+
+.hr,
+.mn,
+.sc{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;  
+}
+
+.hr:before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #ffb510;
+    z-index: 9;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #080808;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc:before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background-color: #8b8b8b;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
